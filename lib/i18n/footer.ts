@@ -1,6 +1,6 @@
 export const footer = {
   description: {
-    en: "Frontend developer with 10+ years of experience building responsive, performant web applications.",
+    en: "Frontend developer with 4+ years of experience building responsive, performant web applications.",
     fr: "Développeur frontend avec plus de 10 ans d'expérience dans la création d'applications web réactives et performantes.",
     es: "Desarrollador frontend con más de 10 años de experiencia construyendo aplicaciones web responsivas y de alto rendimiento.",
     de: "Frontend-Entwickler mit über 10 Jahren Erfahrung im Aufbau responsiver, leistungsstarker Webanwendungen.",

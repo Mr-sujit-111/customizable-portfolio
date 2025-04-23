@@ -111,7 +111,7 @@ const resumeData = {
       { name: "Framer Motion", level: 85 },
       { name: "Redux", level: 92 },
       { name: "React Query", level: 88 },
-      { name: "Git/GitHub", level: 90 },
+      { name: "Git/GitHub/Gitlab", level: 90 },
     ],
     soft: [
       "Team Leadership",

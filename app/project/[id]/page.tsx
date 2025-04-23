@@ -558,8 +558,8 @@ export default function ProjectDetailPage() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
                   <Card>
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <div className="bg-primary/10 p-2 rounded-full ">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -624,9 +624,8 @@ export default function ProjectDetailPage() {
                 {project.screenshots.map((screenshot: any, index: number) => (
                   <div
                     key={index}
-                    className={`flex-shrink-0 cursor-pointer transition-all duration-200 ${
-                      currentImageIndex === index ? "ring-2 ring-primary ring-offset-2" : "opacity-70 hover:opacity-100"
-                    }`}
+                    className={`flex-shrink-0 cursor-pointer transition-all duration-200 ${currentImageIndex === index ? "ring-2 ring-primary ring-offset-2" : "opacity-70 hover:opacity-100"
+                      }`}
                     style={{ width: "150px" }}
                     onClick={() => setCurrentImageIndex(index)}
                   >

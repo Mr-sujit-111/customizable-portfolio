@@ -35,7 +35,7 @@ const skillCategories = [
       { name: "Context API", level: 95 },
       { name: "Zustand", level: 85 },
       { name: "React Query", level: 88 },
-      { name: "Git/GitHub", level: 90 },
+      { name: "Git/GitHub/Gitlab", level: 90 },
     ],
   },
 ]

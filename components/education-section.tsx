@@ -11,52 +11,54 @@ import { GraduationCap, Award, Calendar } from "lucide-react"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
 
+
+
 const education = [
   {
-    degree: "Master of Computer Science",
-    institution: "Stanford University",
-    period: "2012-2014",
+    degree: "Bachelor of Engineering in Computer Science",
+    institution: "S.S Agrawal Institute of Engineering and Technology, Navsari (GTU)",
+    period: "2019-2023",
     description:
-      "Specialized in Human-Computer Interaction and Frontend Engineering. Graduated with honors and completed thesis on 'Optimizing User Interfaces for Cognitive Accessibility'.",
-    achievements: ["Dean's List", "4.0 GPA", "Research Assistant"],
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
-  },
-  {
-    degree: "Bachelor of Science in Information Technology",
-    institution: "MIT",
-    period: "2008-2012",
-    description:
-      "Focused on Web Development and User Experience Design. Participated in multiple hackathons and led the university's web development club.",
-    achievements: ["Summa Cum Laude", "President of Web Dev Club", "Undergraduate Teaching Assistant"],
+      "Focused on frontend technologies and UI/UX design. Completed an internship at SoftX Solution during the 3rd year and received the Academic Excellence Award.",
+    achievements: ["Academic Excellence Award", "Internship at SoftX Solution", "9.2 CGPA"],
     image:
       "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
   },
-]
+  {
+    degree: "Higher Secondary (12th Science)",
+    institution: "Taravada Gurukul",
+    period: "2017-2019",
+    description:
+      "Completed 12th Science with a strong focus on Mathematics and Physics. Developed early interest in computers and logical reasoning.",
+    achievements: ["82% Overall", "Top performer in Math & Computer Science"],
+    image:
+      "https://images.unsplash.com/photo-1661708536171-6ab86f702736?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "2022",
+    name: "Academic excellence award",
+    issuer: "SSAIET",
+    date: "2018",
     icon: Award,
   },
   {
-    name: "Google Professional Cloud Developer",
-    issuer: "Google Cloud",
-    date: "2021",
-    icon: Award,
-  },
-  {
-    name: "Advanced React & GraphQL",
-    issuer: "Frontend Masters",
-    date: "2020",
-    icon: Award,
-  },
-  {
-    name: "UI/UX Design Specialization",
-    issuer: "Interaction Design Foundation",
+    name: "GTU Scholar Award 2019",
+    issuer: "GTU",
     date: "2019",
+    icon: Award,
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    issuer: "freecodecamp",
+    date: "2023",
+    icon: Award,
+  },
+  {
+    name: "Hubspot Design Certification",
+    issuer: "Hubspot",
+    date: "2025",
     icon: Award,
   },
 ]
@@ -202,10 +204,11 @@ export function EducationSection() {
                     resetCardTransform(e.currentTarget)
                     setHoveredCard(null)
                   }}
+                  className=""
                   onMouseMove={(e) => handleMouseMove(e, index)}
                   style={{ transition: "transform 0.2s ease-out" }}
                 >
-                  <Card className="overflow-hidden border-none shadow-lg">
+                  <Card className="overflow-hidden  shadow-lg">
                     <div className="grid md:grid-cols-2">
                       <div className="h-64 md:h-auto overflow-hidden">
                         <motion.img
@@ -341,7 +344,7 @@ export function EducationSection() {
                       y: -5,
                       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                     }}
-                    className="bg-muted/50 rounded-lg p-6 text-center border border-border/50 hover:shadow-md transition-all duration-300"
+                    className="bg-muted/50 rounded-lg p-6 text-center border  hover:shadow-md transition-all duration-300"
                   >
                     <motion.div
                       className="flex justify-center mb-4"

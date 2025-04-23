@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef, useState } from "react"
 import { ParallaxElement } from "./parallax-element"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Layout, Smartphone, Gauge, LineChart, Layers, ArrowRight } from "lucide-react"
+import { Code, Layout, Smartphone, Gauge, LineChart, Layers, ArrowRight, Plug } from "lucide-react"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
 
@@ -32,16 +32,16 @@ const services = [
     features: ["User Interface Design", "Interaction Design", "Wireframing & Prototyping", "Design Systems"],
   },
   {
-    title: "Mobile Development",
-    description: "Developing cross-platform mobile applications with React Native for iOS and Android.",
-    icon: Smartphone,
+    title: "API Integration",
+    description: "Specializing in seamless API integration and server-side API development for scalable web applications.",
+    icon: Plug, // You can change this icon to something more suitable like `Server`, `Plug`, or `Code`
     color: "bg-green-500/10 border-green-500/20 text-green-500",
-    features: ["React Native Apps", "Cross-platform Development", "Native Integrations", "App Store Deployment"],
+    features: ["REST & GraphQL APIs", "Third-party Service Integration", "Server-side API Development", "Authentication & Security"],
   },
   {
     title: "Performance Optimization",
     description:
-      "Improving application speed, responsiveness, and overall user experience through optimization techniques.",
+      "Improving application speed, responsiveness, and overall user experience.",
     icon: Gauge,
     color: "bg-orange-500/10 border-orange-500/20 text-orange-500",
     features: [
@@ -210,7 +210,7 @@ export function ServicesSection() {
                   onMouseMove={(e) => handleMouseMove(e, index)}
                   style={{ transition: "transform 0.2s ease-out" }}
                 >
-                  <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className="h-full border shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <motion.div
@@ -263,7 +263,7 @@ export function ServicesSection() {
                         ))}
                       </ul>
 
-                      <motion.div
+                      {/* <motion.div
                         whileHover={{ scale: 1.05, x: 5 }}
                         className="flex items-center text-primary text-sm font-medium"
                       >
@@ -274,7 +274,7 @@ export function ServicesSection() {
                         >
                           <ArrowRight className="h-4 w-4 ml-1" />
                         </motion.div>
-                      </motion.div>
+                      </motion.div> */}
                     </CardContent>
                   </Card>
                 </motion.div>

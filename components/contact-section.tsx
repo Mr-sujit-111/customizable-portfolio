@@ -153,7 +153,7 @@ export function ContactSection() {
                 transition={{ duration: 0.5 }}
               >
                 <Card className="h-full border-none shadow-lg">
-                  <CardContent className="p-8">
+                  <CardContent className="p-8 border">
                     <h3 className="text-2xl font-bold mb-6">{t("contact.form.send")}</h3>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                       <div className="grid gap-6 sm:grid-cols-2">
@@ -260,7 +260,7 @@ export function ContactSection() {
                 transition={{ duration: 0.5 }}
               >
                 <Card className="h-full border-none shadow-lg">
-                  <CardContent className="p-8">
+                  <CardContent className="p-8 border">
                     <h3 className="text-2xl font-bold mb-6">{t("contact.connect")}</h3>
                     <div className="space-y-8">
                       <div className="flex items-center gap-4">
@@ -270,10 +270,11 @@ export function ContactSection() {
                         <div>
                           <p className="font-medium text-lg">Email</p>
                           <a
-                            href="mailto:sujit.bhanderi@example.com"
+                            target="_blank"
+                            href="mailto:sbhanderi11@gmail.com"
                             className="text-primary hover:underline transition-colors"
                           >
-                            sujit.bhanderi@example.com
+                            sbhanderi11@gmail.com
                           </a>
                         </div>
                       </div>
@@ -285,10 +286,11 @@ export function ContactSection() {
                         <div>
                           <p className="font-medium text-lg">LinkedIn</p>
                           <Link
-                            href="https://linkedin.com/in/sujitbhanderi"
+                            target="_blank"
+                            href="https://in.linkedin.com/in/sujit-bhanderi331"
                             className="text-primary hover:underline transition-colors"
                           >
-                            linkedin.com/in/sujitbhanderi
+                            linkedin.com/sujit-bhanderi331
                           </Link>
                         </div>
                       </div>
@@ -300,10 +302,11 @@ export function ContactSection() {
                         <div>
                           <p className="font-medium text-lg">GitHub</p>
                           <Link
-                            href="https://github.com/sujitbhanderi"
+                            target="_blank"
+                            href="https://github.com/Mr-sujit-111"
                             className="text-primary hover:underline transition-colors"
                           >
-                            github.com/sujitbhanderi
+                            github.com/Mr-sujit-111
                           </Link>
                         </div>
                       </div>

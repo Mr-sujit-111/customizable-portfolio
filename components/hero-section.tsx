@@ -219,6 +219,7 @@ export function HeroSection() {
                   variant="outline"
                   size="lg"
                   className="gap-2 text-lg px-6 bg-white/10 backdrop-blur-sm relative overflow-hidden group"
+                  onClick={() => window.open("https://github.com/Mr-sujit-111", "_blank")}
                 >
                   <motion.span
                     className="absolute inset-0 bg-white/10"

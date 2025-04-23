@@ -11,7 +11,7 @@ export const hero = {
     gu: "ફ્રન્ટએન્ડ ડેવલપર અને UI/UX નિષ્ણાત",
   },
   description: {
-    en: `Crafting exceptional digital experiences with ${experienceYears}+ years of expertise in building fully responsive, performant, and pixel-perfect applications."`,
+    en: `Crafting exceptional digital experiences with ${experienceYears}+ years of expertise in building fully responsive, performant, and pixel-perfect applications.`,
     fr: `Création d'expériences numériques exceptionnelles avec plus de ${experienceYears}+  ans d'expertise dans la création d'applications entièrement réactives, performantes et parfaitement pixelisées.`,
     es: `Creando experiencias digitales excepcionales con más de ${experienceYears}+  años de experiencia en la construcción de aplicaciones totalmente responsivas, de alto rendimiento y pixel-perfect.`,
     de: `Entwicklung außergewöhnlicher digitaler Erlebnisse mit über ${experienceYears}+  Jahren Erfahrung im Aufbau vollständig responsiver, leistungsstarker und pixelgenauer Anwendungen.`,
