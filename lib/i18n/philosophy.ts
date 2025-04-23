@@ -1,0 +1,38 @@
+export const philosophy = {
+  title: {
+    en: "My Approach",
+    fr: "Mon approche",
+    es: "Mi enfoque",
+    de: "Mein Ansatz",
+    zh: "我的方法",
+    hi: "मेरा दृष्टिकोण",
+    gu: "મારો અભિગમ",
+  },
+  heading: {
+    en: "Frontend Philosophy & Methodology",
+    fr: "Philosophie et méthodologie frontend",
+    es: "Filosofía y metodología frontend",
+    de: "Frontend-Philosophie & Methodik",
+    zh: "前端理念与方法论",
+    hi: "फ्रंटएंड दर्शन और कार्यप्रणाली",
+    gu: "ફ્રન્ટએન્ડ ફિલોસોફી અને પદ્ધતિ",
+  },
+  description: {
+    en: "My approach to frontend development is centered around these key principles that ensure exceptional results for every project",
+    fr: "Mon approche du développement frontend est centrée sur ces principes clés qui garantissent des résultats exceptionnels pour chaque projet",
+    es: "Mi enfoque del desarrollo frontend se centra en estos principios clave que garantizan resultados excepcionales para cada proyecto",
+    de: "Mein Ansatz für Frontend-Entwicklung konzentriert sich auf diese Schlüsselprinzipien, die außergewöhnliche Ergebnisse für jedes Projekt gewährleisten",
+    zh: "我的前端开发方法围绕这些关键原则，确保每个项目都能取得卓越的成果",
+    hi: "फ्रंटएंड डेवलपमेंट के प्रति मेरा दृष्टिकोण इन प्रमुख सिद्धांतों पर केंद्रित है जो हर प्रोजेक्ट के लिए असाधारण परिणाम सुनिश्चित करते हैं",
+    gu: "ફ્રન્ટએન્ડ ડેવલપમેન્ટ પ્રત્યેનો મારો અભિગમ આ મુખ્ય સિદ્ધાંતો પર કેન્દ્રિત છે જે દરેક પ્રોજેક્ટ માટે અસાધારણ પરિણામો સુનિશ્ચિત કરે છે",
+  },
+  poweredBy: {
+    en: "Powered by:",
+    fr: "Propulsé par :",
+    es: "Desarrollado con:",
+    de: "Unterstützt durch:",
+    zh: "技术支持：",
+    hi: "द्वारा संचालित:",
+    gu: "દ્વારા સંચાલિત:",
+  },
+}
