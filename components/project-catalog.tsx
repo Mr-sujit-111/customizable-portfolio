@@ -15,92 +15,19 @@ import { useTranslation } from "@/lib/i18n"
 // Project data with real images
 const projects = [
   {
-    id: "dashboard",
-    title: "Analytics Dashboard",
+    id: "landing-page",
+    title: "Landing Page",
     description:
-      "Enterprise analytics dashboard with real-time data visualization, customizable widgets, and comprehensive reporting tools.",
+      "A modern and responsive landing page for showcasing products with smooth animations.",
     longDescription:
-      "This enterprise-grade dashboard provides administrators with comprehensive analytics and data visualization tools. Built with performance in mind, it features optimized rendering, lazy-loaded components, and smooth animations that enhance the user experience without sacrificing performance. The dashboard includes customizable widgets, real-time data updates, and export capabilities for reports.",
-    techStack: ["Next.js", "TypeScript", "Recharts", "Tailwind CSS", "React Query"],
-    github: "https://github.com/sujitbhanderi/analytics-dashboard",
-    live: "https://analytics-dashboard.vercel.app",
+      "A sleek, responsive landing page built with Next.js, styled using Tailwind CSS, and animated with Framer Motion for smooth transitions. It showcases products in a modern grid layout with interactive hover effects and scroll-triggered animations. Lucide Icons enhance visual clarity throughout the UI. Perfect for performance-focused, mobile-friendly product displays.",
+    techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "lucide Icons"],
+    github: "https://github.com/Mr-sujit-111/landing-page",
+    live: "https://landing-page-gamma-rouge.vercel.app/",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "/projects/landing-page/thumbnail.png",
     icon: LineChart,
     color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
-  },
-  {
-    id: "ecommerce",
-    title: "E-Commerce Platform",
-    description:
-      "Full-featured online store with product filtering, cart management, payment processing, and order tracking.",
-    longDescription:
-      "This comprehensive e-commerce solution provides businesses with everything they need to sell products online. The platform includes advanced features like inventory management, dynamic pricing, customer accounts, wishlist functionality, and detailed analytics to help optimize sales performance. The checkout process is streamlined for maximum conversion, with multiple payment options and shipping integrations.",
-    techStack: ["Next.js", "Redux", "Stripe", "MongoDB", "Tailwind CSS", "TypeScript"],
-    github: "https://github.com/sujitbhanderi/ecommerce-platform",
-    live: "https://ecommerce-platform.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    icon: Globe,
-    color: "bg-green-500/10 border-green-500/20 text-green-500",
-  },
-  {
-    id: "contracts",
-    title: "Contract Management System",
-    description:
-      "Enterprise-grade contract manager with filterable tables, PDF exports, and automated workflow tracking.",
-    longDescription:
-      "This comprehensive contract management solution helps businesses track, manage, and analyze their contracts throughout the entire lifecycle. The platform includes advanced features like document versioning, approval workflows, automated reminders, and detailed audit trails to ensure compliance and reduce risk. The system integrates with popular CRM and ERP solutions for seamless data flow across the organization.",
-    techStack: ["Next.js", "AG Grid", "Tailwind CSS", "React Query", "Redux", "TypeScript"],
-    github: "https://github.com/sujitbhanderi/contract-platform",
-    live: "https://contract-platform.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
-    icon: Database,
-    color: "bg-purple-500/10 border-purple-500/20 text-purple-500",
-  },
-  {
-    id: "scheduler",
-    title: "Time Entry Scheduler",
-    description: "Modern time entry UI with dynamic grid layouts and animated deletions, built for productivity apps.",
-    longDescription:
-      "This intuitive time management application helps professionals track their work hours, manage projects, and analyze productivity patterns. The interface prioritizes ease of use with natural interactions like drag-and-drop, while the backend ensures accurate data processing and reporting capabilities. Features include recurring events, time tracking, project categorization, and detailed reporting with visual charts.",
-    techStack: ["React", "Tailwind CSS", "Framer Motion", "Context API", "TypeScript"],
-    github: "https://github.com/sujitbhanderi/time-entry-ui",
-    live: "https://time-entry-ui.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
-    icon: Layers,
-    color: "bg-orange-500/10 border-orange-500/20 text-orange-500",
-  },
-  {
-    id: "realestate",
-    title: "Real Estate Portal",
-    description: "Interactive property search platform with map integration, filtering options, and virtual tours.",
-    longDescription:
-      "This sophisticated real estate platform connects buyers, sellers, and agents through an intuitive interface. Features include advanced property search with geolocation, virtual property tours, mortgage calculators, and a CRM system for agents to manage leads and client communications. The platform uses high-performance map rendering and image optimization to ensure a smooth experience even with large property catalogs.",
-    techStack: ["Next.js", "Google Maps API", "Tailwind CSS", "Prisma", "PostgreSQL", "TypeScript"],
-    github: "https://github.com/sujitbhanderi/realestate-portal",
-    live: "https://realestate-portal.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80",
-    icon: Globe,
-    color: "bg-cyan-500/10 border-cyan-500/20 text-cyan-500",
-  },
-  {
-    id: "mobile",
-    title: "Mobile Banking App",
-    description:
-      "Secure and intuitive mobile banking application with transaction history, bill payments, and account management.",
-    longDescription:
-      "This mobile banking application provides users with a secure and intuitive way to manage their finances on the go. Features include real-time transaction history, bill payments, account management, and secure authentication methods including biometrics. The app is built with React Native for cross-platform compatibility and uses advanced encryption to ensure user data remains secure.",
-    techStack: ["React Native", "Redux", "TypeScript", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/sujitbhanderi/mobile-banking",
-    live: "https://mobile-banking.vercel.app",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    icon: Smartphone,
-    color: "bg-pink-500/10 border-pink-500/20 text-pink-500",
   },
 ]
 

@@ -32,72 +32,90 @@ const resumeData = {
   personalInfo: {
     name: "Sujit Bhanderi",
     title: "Senior Frontend Developer",
-    email: "sujit.bhanderi@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    website: "www.sujitbhanderi.com",
-    linkedin: "linkedin.com/in/sujitbhanderi",
-    github: "github.com/sujitbhanderi",
+    email: "sbhanderi11@gmail.com",
+    phone: "+91 7359068984",
+    location: "Surat, Gujarat, India",
+    website: "https://sujit-cv.netlify.app/",
+    linkedin: "https://in.linkedin.com/in/sujit-bhanderi331",
+    github: "https://github.com/Mr-sujit-111",
     summary:
       `Frontend developer with ${experienceYears}+ years of experience building responsive, performant web applications. Specialized in React, Next.js, and modern frontend technologies with a focus on creating exceptional user experiences.`,
   },
   experience: [
     {
-      role: "Lead Frontend Architect",
-      company: "TechInnovate Solutions",
-      period: "2021–Present",
+      role: "Freelance Frontend Developer",
+      company: "Upwork",
+      period: "Mar 2024 – Present",
+      duration: "Current",
       description:
-        "Leading a team of 8 frontend developers in building enterprise-scale applications. Established coding standards, component libraries, and CI/CD pipelines that reduced development time by 40%. Implemented performance optimizations that improved load times by 65%.",
+        "Working as a freelance frontend developer on Upwork, delivering high-quality web applications using the latest technologies in the React and Next.js ecosystem. Partnered with international clients to build scalable, performant, and fully responsive UIs.",
       achievements: [
-        "Architected and delivered a complex SaaS platform serving 50,000+ daily users",
-        "Reduced bundle size by 60% through code splitting and lazy loading strategies",
-        "Mentored junior developers and conducted technical interviews",
-        "Collaborated with UX team to create a design system used across all products",
+        "Built and deployed multiple production-grade web apps using Next.js 14/15 and App Router",
+        "Integrated advanced features like server components, streaming, and dynamic SEO metadata",
+        "Implemented design systems and responsive layouts with Tailwind CSS and Framer Motion",
+        "Optimized Core Web Vitals and ensured accessibility best practices",
+      ],
+      technologies: [
+        "Next.js (App Router)",
+        "React.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Redux",
+        "TypeScript",
+        "ShadCN",
+        "Vercel",
       ],
     },
     {
-      role: "Senior Frontend Developer",
-      company: "Digital Dynamics Inc.",
-      period: "2018–2021",
+      role: "ReactJs Developer",
+      company: "SoftX Solution",
+      period: "Jan 2022 – Mar 2024",
+      duration: "2 yrs 3 mos",
       description:
-        "Led frontend development for multiple high-traffic web applications. Implemented responsive designs, state management solutions, and accessibility improvements. Collaborated with backend teams to design and consume RESTful APIs.",
+        "Worked as a full-time ReactJs Developer building responsive and optimized web applications. Collaborated with the backend team to integrate APIs and ensure seamless data flow. Delivered production-ready applications using modern frontend technologies.",
       achievements: [
-        "Rebuilt legacy application as a modern React SPA, improving user retention by 35%",
-        "Implemented comprehensive test coverage that reduced production bugs by 80%",
-        "Created reusable component library that accelerated development across teams",
-        "Optimized rendering performance for data-heavy dashboards and visualizations",
+        "Developed and maintained multiple client-facing projects using Next.js and React",
+        "Implemented reusable components and design patterns to improve development efficiency",
+        "Optimized performance using dynamic imports and lazy loading",
+        "Worked closely with UI/UX designers to deliver pixel-perfect responsive layouts",
       ],
+      technologies: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "Redux"],
     },
     {
-      role: "UI Engineer",
-      company: "WebSphere Technologies",
-      period: "2015–2018",
+      role: "ReactJs Trainee",
+      company: "SoftX Solution",
+      period: "Nov 2021 – Jan 2022",
+      duration: "3 mos",
       description:
-        "Developed responsive web interfaces for clients across various industries. Collaborated with designers to implement pixel-perfect UIs and ensure cross-browser compatibility. Created interactive prototypes for user testing.",
+        "Completed a hands-on internship program focused on core React.js fundamentals, component design, and frontend project development best practices.",
       achievements: [
-        "Delivered 15+ client projects with 100% on-time completion rate",
-        "Implemented mobile-first responsive designs that increased mobile conversions by 45%",
-        "Developed custom JavaScript libraries for complex UI interactions",
-        "Optimized asset delivery pipeline, reducing page load times by 30%",
+        "Built internal tools and dashboards as part of training projects",
+        "Gained practical experience with React hooks and functional components",
+        "Collaborated with senior developers for code reviews and knowledge sharing",
       ],
+      technologies: ["React.js", "JavaScript", "HTML5", "CSS3"],
     },
   ],
   education: [
     {
-      degree: "Master of Computer Science",
-      institution: "Stanford University",
-      period: "2012-2014",
+      degree: "Bachelor of Engineering in Computer Science",
+      institution: "S.S Agrawal Institute of Engineering and Technology, Navsari (GTU)",
+      period: "2019-2023",
       description:
-        "Specialized in Human-Computer Interaction and Frontend Engineering. Graduated with honors and completed thesis on 'Optimizing User Interfaces for Cognitive Accessibility'.",
-      achievements: ["Dean's List", "4.0 GPA", "Research Assistant"],
+        "Focused on frontend technologies and UI/UX design. Completed an internship at SoftX Solution during the 3rd year and received the Academic Excellence Award.",
+      achievements: ["Academic Excellence Award", "Internship at SoftX Solution", "9.2 CGPA"],
+      image:
+        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     },
     {
-      degree: "Bachelor of Science in Information Technology",
-      institution: "MIT",
-      period: "2008-2012",
+      degree: "Higher Secondary (12th Science)",
+      institution: "Taravada Gurukul",
+      period: "2017-2019",
       description:
-        "Focused on Web Development and User Experience Design. Participated in multiple hackathons and led the university's web development club.",
-      achievements: ["Summa Cum Laude", "President of Web Dev Club", "Undergraduate Teaching Assistant"],
+        "Completed 12th Science with a strong focus on Mathematics and Physics. Developed early interest in computers and logical reasoning.",
+      achievements: ["82% Overall", "Top performer in Math & Computer Science"],
+      image:
+        "https://images.unsplash.com/photo-1661708536171-6ab86f702736?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ],
   skills: {
@@ -126,14 +144,14 @@ const resumeData = {
   },
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2022",
+      name: "Academic excellence award",
+      issuer: "SSAIET",
+      date: "2018",
     },
     {
-      name: "Google Professional Cloud Developer",
-      issuer: "Google Cloud",
-      date: "2021",
+      name: "GTU Scholar Award 2019",
+      issuer: "GTU",
+      date: "2019",
     },
     {
       name: "Advanced React & GraphQL",
@@ -147,11 +165,9 @@ const resumeData = {
     },
   ],
   languages: [
-    { name: "English", proficiency: "Native" },
-    { name: "Spanish", proficiency: "Professional" },
-    { name: "French", proficiency: "Intermediate" },
-    { name: "Hindi", proficiency: "Fluent" },
     { name: "Gujarati", proficiency: "Native" },
+    { name: "Hindi", proficiency: "Fluent" },
+    { name: "English", proficiency: "Professional" },
   ],
 }
 
@@ -287,7 +303,7 @@ export default function ResumePage() {
                     {resumeData.experience.map((exp, index) => (
                       <div key={index} className="grid md:grid-cols-[1fr_3fr] gap-4">
                         <div>
-                          <p className="font-semibold">{exp.period}</p>
+                          <p className="font-semibold">{exp?.period}</p>
                           <p className="text-muted-foreground">{exp.company}</p>
                         </div>
                         <div>

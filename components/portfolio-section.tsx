@@ -29,81 +29,17 @@ import { useTranslation } from "@/lib/i18n"
 const generateProjects = () => {
   const baseProjects = [
     {
-      id: "dashboard",
-      title: "Analytics Dashboard",
-      description: "Enterprise analytics dashboard with real-time data visualization.",
+      id: "landing-page",
+      title: "Landing Page",
+      description: "A modern and responsive landing page for showcasing products with smooth animations.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      category: "dashboard",
-      techStack: ["Next.js", "TypeScript", "Recharts", "Tailwind CSS"],
-      icon: LineChart,
-      color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
-    },
-    {
-      id: "ecommerce",
-      title: "E-Commerce Platform",
-      description: "Full-featured online store with product filtering and cart management.",
-      image:
-        "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      category: "ecommerce",
-      techStack: ["Next.js", "Redux", "Stripe", "MongoDB"],
-      icon: Globe,
+        "/projects/landing-page/thumbnail.png",
+      category: "landing-page",
+      techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "lucide Icons"],
+      git: "https://github.com/Mr-sujit-111/landing-page",
+      url: "https://landing-page-gamma-rouge.vercel.app/",
+      icon: Globe, // Example icon, could be `Globe` or any other React Icon you choose
       color: "bg-green-500/10 border-green-500/20 text-green-500",
-    },
-    {
-      id: "contracts",
-      title: "Contract Management System",
-      description: "Enterprise-grade contract manager with filterable tables and PDF exports.",
-      image:
-        "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
-      category: "enterprise",
-      techStack: ["Next.js", "AG Grid", "Tailwind CSS", "React Query"],
-      icon: Database,
-      color: "bg-purple-500/10 border-purple-500/20 text-purple-500",
-    },
-    {
-      id: "scheduler",
-      title: "Time Entry Scheduler",
-      description: "Modern time entry UI with dynamic grid layouts and animated deletions.",
-      image:
-        "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
-      category: "productivity",
-      techStack: ["React", "Tailwind CSS", "Framer Motion", "Context API"],
-      icon: Code,
-      color: "bg-orange-500/10 border-orange-500/20 text-orange-500",
-    },
-    {
-      id: "realestate",
-      title: "Real Estate Portal",
-      description: "Interactive property search platform with map integration and filtering options.",
-      image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80",
-      category: "enterprise",
-      techStack: ["Next.js", "Google Maps API", "Tailwind CSS", "Prisma"],
-      icon: Globe,
-      color: "bg-cyan-500/10 border-cyan-500/20 text-cyan-500",
-    },
-    {
-      id: "mobile",
-      title: "Mobile Banking App",
-      description: "Secure and intuitive mobile banking application with transaction history.",
-      image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      category: "mobile",
-      techStack: ["React Native", "Redux", "TypeScript", "Node.js"],
-      icon: Smartphone,
-      color: "bg-pink-500/10 border-pink-500/20 text-pink-500",
-    },
-    {
-      id: "portfolio",
-      title: "Designer Portfolio",
-      description: "Stunning portfolio website with advanced animations and 3D effects.",
-      image:
-        "https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
-      category: "portfolio",
-      techStack: ["Next.js", "Three.js", "GSAP", "Tailwind CSS"],
-      icon: Layout,
-      color: "bg-indigo-500/10 border-indigo-500/20 text-indigo-500",
     },
   ]
 
@@ -139,7 +75,8 @@ const generateProjects = () => {
     })
   }
 
-  return [...baseProjects, ...additionalProjects]
+  return [...baseProjects]
+  // return [...baseProjects, ...additionalProjects]
 }
 
 const allProjects = generateProjects()
@@ -243,16 +180,28 @@ function ProjectCard({ project, onClick }: { project: any; onClick: () => void }
           >
             <div className="flex gap-2">
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-                <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
-                  <Github className="h-4 w-4" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
+                <a
+                  href={project.git} // Replace with your GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
+                    <Github className="h-4 w-4" />
+                    <span className="sr-only">GitHub</span>
+                  </Button>
+                </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.1, rotate: -5 }}>
-                <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
-                  <ExternalLink className="h-4 w-4" />
-                  <span className="sr-only">Live Preview</span>
-                </Button>
+                <a
+                  href={project.url} // Replace with your GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="icon" className="h-8 w-8 rounded-full">
+                    <ExternalLink className="h-4 w-4" />
+                    <span className="sr-only">Live Preview</span>
+                  </Button>
+                </a>
               </motion.div>
             </div>
             <motion.div whileHover={{ scale: 1.05, x: 3 }} transition={{ type: "spring" }}>
@@ -383,16 +332,28 @@ function ProjectDetailModal({ project, onClose }: { project: any; onClose: () =>
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <motion.div whileHover={{ scale: 1.05, y: -2 }}>
-                <Button variant="outline" size="sm" className="flex items-center gap-1">
-                  <Github className="h-4 w-4" />
-                  GitHub Repository
-                </Button>
+                <a
+                  href={project.git} // Replace with your GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm" className="flex items-center gap-1">
+                    <Github className="h-4 w-4" />
+                    GitHub Repository
+                  </Button>
+                </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05, y: -2 }}>
-                <Button size="sm" className="flex items-center gap-1">
-                  <ExternalLink className="h-4 w-4" />
-                  Live Preview
-                </Button>
+                <a
+                  href={project.url} // Replace with your GitHub URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="sm" className="flex items-center gap-1">
+                    <ExternalLink className="h-4 w-4" />
+                    Live Preview
+                  </Button>
+                </a>
               </motion.div>
             </motion.div>
           </div>
@@ -596,11 +557,10 @@ export function PortfolioSection() {
                     variant={currentPage === page ? "default" : "outline"}
                     size="sm"
                     onClick={() => setCurrentPage(page)}
-                    className={`w-8 h-8 p-0 ${
-                      totalPages > 7 && page > 3 && page < totalPages - 2 && Math.abs(currentPage - page) > 1
-                        ? "hidden"
-                        : ""
-                    }`}
+                    className={`w-8 h-8 p-0 ${totalPages > 7 && page > 3 && page < totalPages - 2 && Math.abs(currentPage - page) > 1
+                      ? "hidden"
+                      : ""
+                      }`}
                   >
                     {page}
                   </Button>
