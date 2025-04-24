@@ -1,38 +1,37 @@
 "use client"
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
-import { useRef, useState } from "react"
-import { ParallaxElement } from "./parallax-element"
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { useRef, useState } from "react"
+import { ParallaxElement } from "./parallax-element"
 
 const testimonials = [
   {
-    name: "Alex Johnson",
-    role: "Product Director",
-    company: "TechCorp",
+    name: "Josh Keogh",
+    role: "Project Manager",
+    company: "",
     message:
-      "Sujit is an exceptional frontend developer who consistently delivers high-quality work. His attention to detail and commitment to creating responsive, user-friendly interfaces has been invaluable to our projects.",
+      "I had the pleasure of working with Sujit, and I couldn't be more impressed. Not only did he deliver the project well before the deadline, but the quality of work exceeded my expectations. Sujit is not just a developer—he’s also a great problem solver who suggested valuable design improvements that made the final product even better.",
     avatar: "/placeholder.svg?height=80&width=80",
   },
   {
-    name: "Sarah Williams",
-    role: "Lead UX Designer",
-    company: "DesignHub",
+    name: "Olivia Jack",
+    role: "CEO",
+    company: "TravelTix",
     message:
-      "Working with Sujit has been a pleasure. He takes design specifications and brings them to life with precision and creativity. His technical skills and collaborative approach make him a valuable asset to any team.",
+      "Working with Sujit was an outstanding experience! His expertise in cutting-edge technologies like Next.js, Tailwind CSS, and Framer Motion and ReactJs truly sets him apart. He seamlessly integrated animations and responsive designs, delivering a smooth and visually stunning frontend for my project",
     avatar: "/placeholder.svg?height=80&width=80",
   },
   {
-    name: "Michael Chen",
+    name: "Nitish Singhal",
     role: "CTO",
-    company: "StartupX",
+    company: "Aarogya",
     message:
-      "Sujit's expertise in modern frontend technologies has significantly improved our application's performance and user experience. He's proactive, solution-oriented, and consistently exceeds expectations.",
+      "excelent work",
     avatar: "/placeholder.svg?height=80&width=80",
   },
   {
@@ -146,7 +145,7 @@ export function TestimonialsSection() {
                     exit="exit"
                     className="w-full"
                   >
-                    <Card className="h-full border-none shadow-lg overflow-hidden">
+                    <Card className="h-full  shadow-lg overflow-hidden">
                       <CardContent className="p-8">
                         <div className="mb-6">
                           <Quote className="h-10 w-10 text-primary/30" />
@@ -154,13 +153,13 @@ export function TestimonialsSection() {
                         <div>
                           <p className="text-lg mb-8 italic">{testimonials[currentIndex].message}</p>
                           <div className="flex items-center gap-4">
-                            <Avatar className="h-14 w-14 border-2 border-primary/10">
+                            {/* <Avatar className="h-14 w-14 border-2 border-primary/10">
                               <AvatarImage
                                 src={testimonials[currentIndex].avatar || "/placeholder.svg"}
                                 alt={testimonials[currentIndex].name}
                               />
                               <AvatarFallback>{testimonials[currentIndex].name.charAt(0)}</AvatarFallback>
-                            </Avatar>
+                            </Avatar> */}
                             <div>
                               <p className="font-semibold text-lg">{testimonials[currentIndex].name}</p>
                               <p className="text-muted-foreground">
@@ -206,9 +205,8 @@ export function TestimonialsSection() {
                       setDirection(idx > currentIndex ? 1 : -1)
                       setCurrentIndex(idx)
                     }}
-                    className={`mx-1 h-2 rounded-full transition-all ${
-                      currentIndex === idx ? "bg-primary w-6" : "bg-primary/30 w-2"
-                    }`}
+                    className={`mx-1 h-2 rounded-full transition-all ${currentIndex === idx ? "bg-primary w-6" : "bg-primary/30 w-2"
+                      }`}
                     aria-label={`Go to testimonial ${idx + 1}`}
                   />
                 ))}
