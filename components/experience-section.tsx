@@ -1,9 +1,7 @@
 "use client"
 
 import Link from "next/link"
-
 import { Button } from "@/components/ui/button"
-
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { ParallaxElement } from "./parallax-element"
@@ -11,49 +9,64 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
+import { Clock } from "lucide-react"
 
 const experiences = [
   {
-    role: "Lead Frontend Architect",
-    company: "TechInnovate Solutions",
-    period: "2021–Present",
+    role: "Freelance Frontend Developer",
+    company: "Upwork",
+    periodYears: "2024 – Present", // Just the year range for timeline
+    periodFull: "Mar 2024 – Present", // Full date range for details
+    duration: "Current", // Duration for separate display
     description:
-      "Leading a team of 8 frontend developers in building enterprise-scale applications. Established coding standards, component libraries, and CI/CD pipelines that reduced development time by 40%. Implemented performance optimizations that improved load times by 65%.",
+      "Working as a freelance frontend developer on Upwork, delivering high-quality web applications using the latest technologies in the React and Next.js ecosystem. Partnered with international clients to build scalable, performant, and fully responsive UIs.",
     achievements: [
-      "Architected and delivered a complex SaaS platform serving 50,000+ daily users",
-      "Reduced bundle size by 60% through code splitting and lazy loading strategies",
-      "Mentored junior developers and conducted technical interviews",
-      "Collaborated with UX team to create a design system used across all products",
+      "Built and deployed multiple production-grade web apps using Next.js 14/15 and App Router",
+      "Integrated advanced features like server components, streaming, and dynamic SEO metadata",
+      "Implemented design systems and responsive layouts with Tailwind CSS and Framer Motion",
+      "Optimized Core Web Vitals and ensured accessibility best practices",
     ],
-    technologies: ["Next.js", "TypeScript", "React Query", "Redux", "Tailwind CSS", "Jest", "Cypress"],
+    technologies: [
+      "Next.js (App Router)",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Redux",
+      "TypeScript",
+      "ShadCN",
+      "Vercel",
+    ],
   },
   {
-    role: "Senior Frontend Developer",
-    company: "Digital Dynamics Inc.",
-    period: "2018–2021",
+    role: "ReactJs Developer",
+    company: "SoftX Solution",
+    periodYears: "2022 – 2024", // Just the year range for timeline
+    periodFull: "Jan 2022 – Mar 2024", // Full date range for details
+    duration: "2 yrs 3 mos", // Duration for separate display
     description:
-      "Led frontend development for multiple high-traffic web applications. Implemented responsive designs, state management solutions, and accessibility improvements. Collaborated with backend teams to design and consume RESTful APIs.",
+      "Worked as a full-time ReactJs Developer building responsive and optimized web applications. Collaborated with the backend team to integrate APIs and ensure seamless data flow. Delivered production-ready applications using modern frontend technologies.",
     achievements: [
-      "Rebuilt legacy application as a modern React SPA, improving user retention by 35%",
-      "Implemented comprehensive test coverage that reduced production bugs by 80%",
-      "Created reusable component library that accelerated development across teams",
-      "Optimized rendering performance for data-heavy dashboards and visualizations",
+      "Developed and maintained multiple client-facing projects using Next.js and React",
+      "Implemented reusable components and design patterns to improve development efficiency",
+      "Optimized performance using dynamic imports and lazy loading",
+      "Worked closely with UI/UX designers to deliver pixel-perfect responsive layouts",
     ],
-    technologies: ["React", "Redux", "SCSS", "JavaScript", "Jest", "Webpack", "GraphQL"],
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "Redux"],
   },
   {
-    role: "UI Engineer",
-    company: "WebSphere Technologies",
-    period: "2015–2018",
+    role: "ReactJs Trainee",
+    company: "SoftX Solution",
+    periodYears: "2021 – 2022", // Just the year range for timeline
+    periodFull: "Nov 2021 – Jan 2022", // Full date range for details
+    duration: "3 mos", // Duration for separate display
     description:
-      "Developed responsive web interfaces for clients across various industries. Collaborated with designers to implement pixel-perfect UIs and ensure cross-browser compatibility. Created interactive prototypes for user testing.",
+      "Completed a hands-on internship program focused on core React.js fundamentals, component design, and frontend project development best practices.",
     achievements: [
-      "Delivered 15+ client projects with 100% on-time completion rate",
-      "Implemented mobile-first responsive designs that increased mobile conversions by 45%",
-      "Developed custom JavaScript libraries for complex UI interactions",
-      "Optimized asset delivery pipeline, reducing page load times by 30%",
+      "Built internal tools and dashboards as part of training projects",
+      "Gained practical experience with React hooks and functional components",
+      "Collaborated with senior developers for code reviews and knowledge sharing",
     ],
-    technologies: ["JavaScript", "HTML5", "CSS3", "jQuery", "Bootstrap", "Gulp", "LESS"],
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3"],
   },
 ]
 
@@ -127,33 +140,47 @@ export function ExperienceSection() {
                   >
                     {/* Timeline dot */}
                     <div
-                      className={`absolute top-0 w-5 h-5 rounded-full border-4 border-background bg-primary ${
-                        index % 2 === 0 ? "md:-left-2.5 left-0" : "md:-right-2.5 left-0"
-                      }`}
+                      className={`absolute top-0 w-5 h-5 rounded-full border-4 border-background bg-primary ${index % 2 === 0 ? "md:-left-2.5 left-0" : "md:-right-2.5 left-0"
+                        }`}
                     />
 
-                    {/* Date badge - absolute positioned for desktop */}
+                    {/* Year range badge - absolute positioned for desktop */}
                     <div
-                      className={`hidden md:block absolute top-0 ${
-                        index % 2 === 0 ? "-left-32 text-right" : "-right-32 text-left"
-                      }`}
+                      className={`hidden md:block absolute top-0 ${index % 2 === 0 ? index === 0 ? "-left-[8.5rem] -top-1.5" : "-left-32 text-right" : "-right-32 text-left"
+                        }`}
                     >
                       <Badge variant="outline" className="text-sm font-medium py-1 px-3">
-                        {exp.period}
+                        {exp.periodYears}
                       </Badge>
                     </div>
 
                     <Card className="overflow-hidden border-border/50 shadow-md hover:shadow-lg transition-shadow duration-300">
-                      {/* Mobile date badge */}
+                      {/* Mobile year range badge */}
                       <div className="md:hidden p-4 pb-0">
                         <Badge variant="outline" className="text-sm font-medium py-1 px-3">
-                          {exp.period}
+                          {exp.periodYears}
                         </Badge>
                       </div>
 
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-bold">{exp.role}</h3>
-                        <p className="text-primary font-medium mb-4">{exp.company}</p>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                          <div>
+                            <h3 className="text-xl font-bold">{exp.role}</h3>
+                            <p className="text-primary font-medium">{exp.company}</p>
+                          </div>
+
+                          {/* Duration badge with clock icon */}
+                          <div className="flex items-center mt-2 sm:mt-0">
+                            <Badge variant="secondary" className="flex items-center gap-1.5 py-1.5">
+                              <Clock className="h-3.5 w-3.5" />
+                              <span className="text-xs font-medium">{exp.duration}</span>
+                            </Badge>
+                          </div>
+                        </div>
+
+                        {/* Full date range */}
+                        <p className="text-sm text-muted-foreground mb-4">{exp.periodFull}</p>
+
                         <p className="text-muted-foreground mb-4">{exp.description}</p>
 
                         <h4 className="font-semibold mb-2">{t("experience.achievements")}</h4>
