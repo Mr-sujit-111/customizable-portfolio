@@ -6,17 +6,23 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Palette } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useSettings } from "@/contexts/settings-context"
 
 const themes = [
-  { name: "Default", value: "default", color: "bg-blue-500" },
-  { name: "Purple", value: "purple", color: "bg-purple-500" },
-  { name: "Green", value: "green", color: "bg-green-500" },
-  { name: "Orange", value: "orange", color: "bg-orange-500" },
-  { name: "Pink", value: "pink", color: "bg-pink-500" },
-]
+  { name: "Midnight", value: "midnight", color: "bg-purple-500" },
+  { name: "Forest", value: "forest", color: "bg-green-500" },
+  { name: "Ocean", value: "ocean", color: "bg-sky-500" },
+  { name: "Sunset", value: "sunset", color: "bg-orange-500" },
+  { name: "Pastel", value: "pastel", color: "bg-pink-500" },
+  { name: "Neon", value: "neon", color: "bg-emerald-500" },
+  { name: "Monochrome", value: "monochrome", color: "bg-neutral-500" },
+  { name: "Solarized", value: "solarized", color: "bg-yellow-600" },
+];
+
 
 export function ThemeSwitcher() {
-  const { setTheme, theme: currentTheme } = useTheme()
+  const { theme: currentTheme } = useTheme();
+  const { setTheme } = useSettings()
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -39,7 +45,7 @@ export function ThemeSwitcher() {
               <span className="sr-only">Change theme</span>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="w-56">
+          <DropdownMenuContent align="start" className="w-72">
             <div className="flex flex-col gap-2 p-2">
               <p className="text-sm font-medium">Color Theme</p>
               <div className="flex flex-wrap gap-2">
@@ -48,16 +54,15 @@ export function ThemeSwitcher() {
                     key={theme.value}
                     variant="outline"
                     size="sm"
-                    className={`flex items-center gap-2 ${
-                      currentTheme === theme.value ? "border-primary" : "border-border"
-                    }`}
+                    className={`flex items-center gap-2 ${currentTheme === theme.value ? "border-primary" : "border-border"
+                      }`}
                     onClick={() => {
                       setTheme(theme.value)
                       setIsOpen(false)
                     }}
                   >
                     <div className={`w-4 h-4 rounded-full ${theme.color}`} />
-                    <span>{theme.name}</span>
+                    <span className="">{theme.name}</span>
                   </Button>
                 ))}
               </div>

@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="https://github.com/sujitbhanderi"
+                  href="https://github.com/Mr-sujit-111"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   GitHub
@@ -65,7 +65,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://linkedin.com/in/sujitbhanderi"
+                  href="https://in.linkedin.com/in/sujit-bhanderi331"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   LinkedIn
@@ -73,15 +73,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://twitter.com/sujitbhanderi"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Twitter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="mailto:sujit.bhanderi@example.com"
+                  href="mailto:sbhanderi11@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Email

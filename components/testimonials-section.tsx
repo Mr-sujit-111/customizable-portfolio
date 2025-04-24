@@ -145,7 +145,7 @@ export function TestimonialsSection() {
                     exit="exit"
                     className="w-full"
                   >
-                    <Card className="h-full  shadow-lg overflow-hidden">
+                    <Card className="h-full border-none shadow-lg overflow-hidden">
                       <CardContent className="p-8">
                         <div className="mb-6">
                           <Quote className="h-10 w-10 text-primary/30" />

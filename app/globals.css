@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Default theme */
   :root {
     --background: 0 0% 100%;
@@ -328,6 +329,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
