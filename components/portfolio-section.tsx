@@ -22,6 +22,15 @@ import {
   Database,
   Globe,
   LayoutDashboard,
+  ScrollText,
+  Shirt,
+  Sparkles,
+  ShoppingCart,
+  Wand2,
+  Plane,
+  UserCircle,
+  CircuitBoard,
+  PlayCircle,
 } from "lucide-react"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
@@ -39,7 +48,7 @@ const generateProjects = () => {
       techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "lucide Icons"],
       git: "https://github.com/Mr-sujit-111/landing-page",
       url: "https://landing-page-gamma-rouge.vercel.app/",
-      icon: Globe, // Example icon, could be `Globe` or any other React Icon you choose
+      icon: Globe,
       color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
     },
     {
@@ -52,7 +61,7 @@ const generateProjects = () => {
       techStack: ["Next.js", "CSS-3", "Bootstrap-4", "lucide Icons"],
       git: "https://github.com/Mr-sujit-111/Bootstrap-showcase",
       url: "https://bootstrap-teal-mu.vercel.app/",
-      icon: Globe, // Example icon, could be `Globe` or any other React Icon you choose
+      icon: Globe,
       color: "bg-green-500/10 border-green-500/20 text-green-500",
     },
     {
@@ -64,7 +73,7 @@ const generateProjects = () => {
       techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript", "Lucide Icons"],
       git: "https://github.com/Mr-sujit-111/frammer-showcase",
       url: "https://frammer.vercel.app/",
-      icon: Globe, // keeping your example icon
+      icon: Globe,
       color: "bg-purple-500/10 border-purple-500/20 text-purple-500",
     },
     {
@@ -76,11 +85,207 @@ const generateProjects = () => {
       techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
       git: "https://github.com/Mr-sujit-111/Shadcn-admin",
       url: "https://shadcn-admin-nu.vercel.app/",
-      icon: LayoutDashboard, // Better suited icon for admin dashboard
+      icon: LayoutDashboard,
+      color: "bg-gray-500/10 border-gray-500/20 text-gray-500",
+    },
+    {
+      id: "framer-parallax-scroll",
+      title: "Framer Motion Parallax Scroll",
+      description: "Built an interactive parallax scroll animation using Framer Motion and Next.js, showcasing smooth class-based animation effects and responsive scroll-driven layouts.",
+      image: "/projects/Frammer-animation/Scroll-Animations-with-Framer-Motion.png",
+      category: "showcase",
+      techStack: ["Next.js", "Framer Motion", "Tailwind CSS"],
+      git: "https://github.com/Mr-sujit-111/frammer-animation",
+      url: "https://frammer-animation.vercel.app/",
+      icon: ScrollText,
       color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
-    }
-
-  ]
+    },
+    {
+      id: "tshirt-design-app",
+      title: "T-shirt Designer App",
+      description: "Created an interactive T-shirt design tool using React.js, MUI, and Firebase, allowing users to drag and drop tattoos onto a T-shirt, customize tattoo size, change T-shirt colors, and download designs as images using html2canvas.",
+      image: "/projects/t-shirt/T-shirt-Design-App (1).png",
+      category: "showcase",
+      techStack: [
+        "React.js",
+        "MUI (@mui/material)",
+        "CSS3",
+        "HTML5",
+        "Firebase",
+        "html2canvas",
+        "Drag and Drop (custom)",
+      ],
+      git: "https://github.com/Mr-sujit-111/tshirt-design",
+      url: "https://t-shirt-design-5818e.web.app/",
+      icon: Shirt,
+      color: "bg-gray-500/10 border-gray-500/20 text-gray-500",
+    },
+    {
+      id: "astrology-animated-app",
+      title: "Astrology Animated App",
+      description: "Developed an interactive astrology-based animated app using pure HTML, CSS3, and JavaScript. The app features a three-step journey where users select a zodiac sign, choose a random card, and reveal a final downloadable card result.",
+      image: "/projects/Animated-cards/Animated-page.png",
+      category: "animation",
+      techStack: [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6)",
+        "Custom Animations",
+      ],
+      git: "https://github.com/Mr-sujit-111/animated-app",
+      url: "https://animatedcontent.000webhostapp.com/",
+      icon: Sparkles,
+      color: "bg-gray-500/10 border-gray-500/20 text-gray-500",
+    },
+    {
+      id: "claybymg-ecommerce",
+      title: "ClayByMG E-commerce Website",
+      description: "Developed a fully functional e-commerce website for clay material products using Next.js, Tailwind CSS, and TypeScript. Features include product listing, add-to-cart functionality with LocalStorage, dynamic content pages, a detailed About page, and a stunning responsive image slider powered by Swiper.js.",
+      image: "/projects/clay-by-mg/claybymg-co-za (1).png",
+      category: "ecommerce",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Swiper.js",
+        "LocalStorage",
+        "Responsive Design",
+        "Framer Motion"
+      ],
+      git: "https://github.com/Mr-sujit-111/ClayByMG-Ecommerce",
+      url: "https://www.claybymg.co.za/",
+      icon: ShoppingCart,
+      color: "bg-yellow-500/10 border-yellow-500/20 text-yellow-500",
+    },
+    {
+      id: "Clearviewcleaners-landing-page",
+      title: "Cleaning-web App",
+      description: "Designed and developed a professional landing page for a cleaning service business, ClearView Cleaners. Built using Next.js, Tailwind CSS, and TypeScript with a focus on a clean, responsive design. Features service highlights, about section, testimonials, and an engaging call-to-action to maximize customer conversions.",
+      image: "/projects/Cleaning/Clearview-Cleaners-Premium-Cleaning-Services.png",
+      category: "landingPage",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Framer Motion",
+        "Responsive Design",
+        "Shadcn UI"
+      ],
+      git: "https://github.com/rushi9814/Cleaning-app",
+      url: "https://clearviewcleaners.vercel.app/",
+      icon: Wand2,
+      color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
+    },
+    {
+      id: "flight-booking-app",
+      title: "Flight Booking Application",
+      description: "Developed a responsive flight booking application using Next.js and Tailwind CSS. Users can search for flights, view available options, and proceed through a seamless booking flow. Focused on modern, intuitive UI/UX and performance optimization.",
+      image: "/projects/flight/React-App.png",
+      category: "landingPage",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Responsive Design",
+        "Framer Motion"
+      ],
+      git: "https://github.com/Mr-sujit-111/flight-booking-app",
+      url: "https://flight-booking-app-taupe.vercel.app/",
+      icon: Plane,
+      color: "bg-indigo-500/10 border-indigo-500/20 text-indigo-500",
+    },
+    {
+      id: "personal-portfolio",
+      title: "Personal Portfolio Website",
+      description: "Created a personal portfolio website to showcase my frontend development skills, projects, and experience. Built with React.js, Tailwind CSS, and TypeScript, featuring smooth animations, responsive design, and a clean, modern UI/UX.",
+      image: "/projects/netlify-portfolio/Sujit-Portfolio.png",
+      category: "portfolio",
+      techStack: [
+        "React.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Framer Motion (if used)",
+        "Responsive Design"
+      ],
+      git: "https://github.com/Mr-sujit-111/Personal-Portfolio",
+      url: "https://sujit-cv.netlify.app/",
+      icon: UserCircle,
+      color: "bg-gray-400 border-[#0f2a2f]/20 text-[#0f2a2f]",
+    },
+    {
+      id: "improved-animated-portfolio",
+      title: "Animated Portfolio",
+      description: "Built an enhanced animated portfolio with Next.js, Framer Motion, and TypeScript. Features include parallax animations, snap scroll, and responsive design for a smooth and dynamic user experience. This project showcases my skills with modern web technologies and animations.",
+      image: "/projects/vercel-portfolio/Create-Next-App.png",
+      category: "portfolio",
+      techStack: [
+        "Next.js",
+        "Framer Motion (Parallax Animations)",
+        "Snap Scroll",
+        "Responsive Design",
+        "TypeScript"
+      ],
+      git: "https://github.com/Mr-sujit-111/modern-cv",
+      url: "https://sujit-cv.vercel.app/",
+      icon: Code,
+      color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
+    },
+    {
+      id: "3d-animated-card-portfolio",
+      title: "Customizable Advance Portfolio",
+      description: "Created a 3D animated card portfolio using Next.js 15, Shadcn UI, TypeScript, and Tailwind CSS. Features custom animations on hover for each card, showcasing my frontend development skills with interactive and dynamic UI/UX design. This project is built for performance and smooth animations.",
+      image: "/projects/frammer/portfolio.png",
+      category: "portfolio",
+      techStack: [
+        "Next.js 15",
+        "Shadcn UI",
+        "TypeScript",
+        "Tailwind CSS",
+        "3D Card Transition"
+      ],
+      git: "https://github.com/Mr-sujit-111/customizable-portfolio",
+      url: "https://customizable-portfolio-eta.vercel.app/",
+      icon: CircuitBoard,
+      color: "bg-red-500/10 border-red-500/20 text-red-500",
+    },
+    {
+      id: "google-clone",
+      title: "Google Clone",
+      description: "Created a Google clone with search functionality using Next.js, Tailwind CSS, TypeScript, MUI, Redux, and Styled Components. The project mimics the core features of the Google homepage, including a search bar and responsive design, providing a smooth, modern user experience.",
+      image: "/projects/google/Google.png",
+      category: "clone",
+      techStack: [
+        "ReactJs",
+        "MUI",
+        "Redux",
+        "Styled Components",
+        "Search Functionality"
+      ],
+      git: "https://github.com/Mr-sujit-111/Google-clone", // Update if needed
+      url: "https://clone-61cf3.web.app/", // Update if needed
+      icon: Search, // 'Search' icon fits well for Google Clone
+      color: "bg-gray-500/10 border-gray-500/20 text-gray-500",
+    },
+    {
+      id: "amazon-clone",
+      title: "Amazon Clone",
+      description: "Created an Amazon clone with e-commerce functionalities using Next.js, Tailwind CSS, TypeScript, MUI, Redux, and Styled Components. The project mimics Amazon’s core features, such as product search, shopping cart, and responsive design, offering a modern user experience with dynamic state management and styled components.",
+      image: "/projects/Amazon/Amazon-clone.png",
+      category: "clone",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "MUI",
+        "Redux",
+        "Styled Components",
+        "E-commerce Functionality"
+      ],
+      git: "https://github.com/Mr-sujit-111/Amazon-clone",
+      url: "https://amazon-clone-seven-xi.vercel.app/",
+      icon: ShoppingCart,
+      color: "bg-yellow-500/10 border-yellow-500/20 text-yellow-500",
+    }]
 
   // Categories to cycle through
   const categories = ["dashboard", "landingPage", "showcase", "enterprise", "productivity", "mobile", "portfolio"]
@@ -360,8 +565,7 @@ function ProjectDetailModal({ project, onClose }: { project: any; onClose: () =>
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                This project showcases advanced frontend techniques and modern design principles. It was built with a
-                focus on performance, accessibility, and user experience.
+
               </motion.p>
             </div>
             <motion.div
@@ -442,10 +646,11 @@ export function PortfolioSection() {
   // Categories for filtering
   const categories = [
     { value: "all", label: "All Projects" },
-    { value: "dashboard", label: "Dashboards" },
+    { value: "clone", label: "Clone" },
     { value: "landingPage", label: "Landing Page" },
     { value: "showcase", label: "Showcase" },
     { value: "portfolio", label: "Portfolio" },
+    { value: "ecommerce", label: "Ecommerce" },
   ]
 
   return (

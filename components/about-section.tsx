@@ -95,7 +95,7 @@ export function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 * index, duration: 0.5 }}
                 >
-                  <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Card className="h-full border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="mt-1 bg-primary/10 p-3 rounded-lg">
