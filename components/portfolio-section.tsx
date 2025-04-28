@@ -21,6 +21,7 @@ import {
   LineChart,
   Database,
   Globe,
+  LayoutDashboard,
 } from "lucide-react"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
@@ -34,17 +35,55 @@ const generateProjects = () => {
       description: "A modern and responsive landing page for showcasing products with smooth animations.",
       image:
         "/projects/landing-page/thumbnail.png",
-      category: "landing-page",
+      category: "landingPage",
       techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "lucide Icons"],
       git: "https://github.com/Mr-sujit-111/landing-page",
       url: "https://landing-page-gamma-rouge.vercel.app/",
       icon: Globe, // Example icon, could be `Globe` or any other React Icon you choose
+      color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
+    },
+    {
+      id: "bootstrap-landing-page",
+      title: "Bootstrap Landing Page",
+      description: "Designed a modern, responsive landing page and portfolio using Bootstrap in Next.js, focusing on clean layout and smooth user experience.",
+      image:
+        "/projects/Bootstrap/Sujit-Bhanderi-Frontend-Developer.png",
+      category: "landingPage",
+      techStack: ["Next.js", "CSS-3", "Bootstrap-4", "lucide Icons"],
+      git: "https://github.com/Mr-sujit-111/Bootstrap-showcase",
+      url: "https://bootstrap-teal-mu.vercel.app/",
+      icon: Globe, // Example icon, could be `Globe` or any other React Icon you choose
       color: "bg-green-500/10 border-green-500/20 text-green-500",
     },
+    {
+      id: "frammer-motion-portfolio",
+      title: "Framer Motion Portfolio",
+      description: "Built a dynamic and modern portfolio using Framer Motion and Next.js, focusing on smooth animations, responsive design, and an interactive user experience.",
+      image: "/projects/frammer/Screenshot.png",
+      category: "showcase",
+      techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript", "Lucide Icons"],
+      git: "https://github.com/Mr-sujit-111/frammer-showcase",
+      url: "https://frammer.vercel.app/",
+      icon: Globe, // keeping your example icon
+      color: "bg-purple-500/10 border-purple-500/20 text-purple-500",
+    },
+    {
+      id: "admin-panel-shadcn",
+      title: "Admin Panel with Shadcn UI",
+      description: "Developed a modern, fully responsive admin dashboard using Shadcn UI, TailwindCSS, Next.js, and TypeScript, featuring dynamic components, dark mode, and elegant layouts.",
+      image: "/projects/admin/Admin-Dashboard.png",
+      category: "adminPanel",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+      git: "https://github.com/Mr-sujit-111/Shadcn-admin",
+      url: "https://shadcn-admin-nu.vercel.app/",
+      icon: LayoutDashboard, // Better suited icon for admin dashboard
+      color: "bg-blue-500/10 border-blue-500/20 text-blue-500",
+    }
+
   ]
 
   // Categories to cycle through
-  const categories = ["dashboard", "ecommerce", "enterprise", "productivity", "mobile", "portfolio"]
+  const categories = ["dashboard", "landingPage", "showcase", "enterprise", "productivity", "mobile", "portfolio"]
   const icons = [LineChart, Globe, Database, Code, Smartphone, Layout]
   const colors = [
     "bg-blue-500/10 border-blue-500/20 text-blue-500",
@@ -404,11 +443,9 @@ export function PortfolioSection() {
   const categories = [
     { value: "all", label: "All Projects" },
     { value: "dashboard", label: "Dashboards" },
-    { value: "enterprise", label: "Enterprise" },
-    { value: "ecommerce", label: "E-Commerce" },
-    { value: "productivity", label: "Productivity" },
-    { value: "mobile", label: "Mobile Apps" },
-    { value: "portfolio", label: "Portfolios" },
+    { value: "landingPage", label: "Landing Page" },
+    { value: "showcase", label: "Showcase" },
+    { value: "portfolio", label: "Portfolio" },
   ]
 
   return (

@@ -35,7 +35,7 @@ const projects = [
     github: "https://github.com/sujitbhanderi/animated-dashboard",
     live: "https://animated-dashboard.vercel.app",
     image: "/placeholder.svg?height=400&width=600",
-    category: "dashboard",
+    category: "landingPage",
     icon: null,
     color: "bg-blue-500",
   },
@@ -44,7 +44,7 @@ const projects = [
 const categories = [
   { value: "all", label: "All Projects" },
   { value: "dashboard", label: "Dashboards" },
-  { value: "enterprise", label: "Enterprise" },
+  { value: "landingPage", label: "Landing Page" },
   { value: "e-commerce", label: "E-Commerce" },
   { value: "productivity", label: "Productivity" },
 ]

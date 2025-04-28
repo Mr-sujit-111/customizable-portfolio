@@ -184,11 +184,11 @@ export default function ProjectDetailPage() {
 
         {/* Main content tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
-          <TabsList className="grid grid-cols-4 md:w-[600px] mb-8">
+          <TabsList className="grid grid-cols-3 md:w-[600px] mb-8">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="features">Features</TabsTrigger>
             <TabsTrigger value="screenshots">Screenshots</TabsTrigger>
-            <TabsTrigger value="video">Demo Video</TabsTrigger>
+            {/* <TabsTrigger value="video">Demo Video</TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
