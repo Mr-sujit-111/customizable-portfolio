@@ -31,9 +31,11 @@ import {
   UserCircle,
   CircuitBoard,
   PlayCircle,
+  Eye,
 } from "lucide-react"
 import { useSettings } from "@/contexts/settings-context"
 import { useTranslation } from "@/lib/i18n"
+import Link from "next/link"
 
 // Generate a larger set of projects (35 total)
 const generateProjects = () => {
@@ -204,7 +206,7 @@ const generateProjects = () => {
         "React.js",
         "Tailwind CSS",
         "TypeScript",
-        "Framer Motion (if used)",
+        "Framer Motion",
         "Responsive Design"
       ],
       git: "https://github.com/Mr-sujit-111/Personal-Portfolio",
@@ -271,7 +273,7 @@ const generateProjects = () => {
       title: "Amazon Clone",
       description: "Created an Amazon clone with e-commerce functionalities using Next.js, Tailwind CSS, TypeScript, MUI, Redux, and Styled Components. The project mimics Amazon’s core features, such as product search, shopping cart, and responsive design, offering a modern user experience with dynamic state management and styled components.",
       image: "/projects/Amazon/Amazon-clone.png",
-      category: "clone",
+      category: "clone,ecommerce",
       techStack: [
         "Next.js",
         "Tailwind CSS",
@@ -598,6 +600,14 @@ function ProjectDetailModal({ project, onClose }: { project: any; onClose: () =>
                   </Button>
                 </a>
               </motion.div>
+              <motion.div whileHover={{ scale: 1.05, y: -2 }}>
+                <Button variant="secondary" size="sm" asChild>
+                  <Link href={`/project/${project.id}`} className="flex items-center gap-1">
+                    <Eye className="h-4 w-4" />
+                    Explore Project
+                  </Link>
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -628,7 +638,7 @@ export function PortfolioSection() {
     const matchesSearch =
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory
+    const matchesCategory = selectedCategory === "all" || project.category?.includes(selectedCategory)
     return matchesSearch && matchesCategory
   })
 

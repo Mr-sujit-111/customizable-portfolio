@@ -28,7 +28,7 @@ export default function Home() {
         <PhilosophySection />
         <SkillsSection />
         <ServicesSection />
-        <ProjectCatalog />
+        {/* <ProjectCatalog /> */}
         <PortfolioSection />
         <BlogSection />
         <EducationSection />
