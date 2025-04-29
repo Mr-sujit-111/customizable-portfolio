@@ -9,12 +9,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useSettings } from "@/contexts/settings-context"
 
 const themes = [
-  { name: "Midnight", value: "midnight", color: "bg-purple-500" },
+  // { name: "Midnight", value: "midnight", color: "bg-purple-500" },
   { name: "Forest", value: "forest", color: "bg-green-500" },
   { name: "Ocean", value: "ocean", color: "bg-sky-500" },
   { name: "Sunset", value: "sunset", color: "bg-orange-500" },
   { name: "Pastel", value: "pastel", color: "bg-pink-500" },
-  { name: "Neon", value: "neon", color: "bg-emerald-500" },
+  // { name: "Neon", value: "neon", color: "bg-emerald-500" },
   { name: "Monochrome", value: "monochrome", color: "bg-neutral-500" },
   { name: "Solarized", value: "solarized", color: "bg-yellow-600" },
 ];

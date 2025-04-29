@@ -27,7 +27,7 @@ const themes = [
       text: "#f8fafc",
     },
   },
-  {
+  /* {
     name: "Midnight",
     value: "midnight",
     colors: {
@@ -36,7 +36,7 @@ const themes = [
       card: "#18181b",
       text: "#fafafa",
     },
-  },
+  }, */
   {
     name: "Forest",
     value: "forest",
@@ -77,7 +77,7 @@ const themes = [
       text: "#831843",
     },
   },
-  {
+  /* {
     name: "Neon",
     value: "neon",
     colors: {
@@ -86,7 +86,7 @@ const themes = [
       card: "#1e293b",
       text: "#ecfdf5",
     },
-  },
+  }, */
   {
     name: "Monochrome",
     value: "monochrome",
